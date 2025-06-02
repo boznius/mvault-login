@@ -65,8 +65,16 @@ solutions:
 
 ### Basic Usage
 
+The script can be executed in two ways:
+
+1. Direct execution (recommended):
 ```bash
-python vault-auth.py --yaml config.yaml --solution dev_solution --env dev
+./mvault-login.py --yaml config.yaml --solution dev_solution --env dev
+```
+
+2. Using Python interpreter:
+```bash
+python mvault-login.py --yaml config.yaml --solution dev_solution --env dev
 ```
 
 ### Command Line Options
@@ -94,10 +102,10 @@ The script outputs the Vault token in a format suitable for shell evaluation:
 
 ```bash
 # Bash/Zsh
-eval $(python vault-auth.py --yaml config.yaml --solution dev_solution --env dev)
+eval $(./mvault-login.py --yaml config.yaml --solution dev_solution --env dev)
 
 # Fish
-python vault-auth.py --yaml config.yaml --solution dev_solution --env dev | source
+./mvault-login.py --yaml config.yaml --solution dev_solution --env dev | source
 ```
 
 ## Security Considerations
@@ -155,7 +163,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Enable debug mode for detailed logging:
 
 ```bash
-python vault-auth.py --yaml config.yaml --solution dev_solution --env dev --debug
+python mvault-login.py --yaml config.yaml --solution dev_solution --env dev --debug
 ```
 
 ## Support
