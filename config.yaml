@@ -1,0 +1,28 @@
+solutions:
+  payment_service:
+    dev:
+      vault_addr: "vault.dev.company.com"
+      login_method: "userpass"
+      username: "payment-dev"
+    staging:
+      vault_addr: "vault.staging.company.com"
+      login_method: "userpass"
+      username: "payment-staging"
+    prod:
+      vault_addr: "vault.prod.company.com"
+      login_method: "oidc"
+      oidc_path: "oidc/payment"
+
+  identity_service:
+    dev:
+      vault_addr: "vault.dev.company.com"
+      login_method: "userpass"
+      username: "identity-dev"
+    staging:
+      vault_addr: "vault.staging.company.com"
+      login_method: "userpass"
+      username: "identity-staging"
+    prod:
+      vault_addr: "https://vault.prod.company.com:8200"
+      login_method: "oidc"
+      oidc_path: "oidc/identity" 
